@@ -4,6 +4,7 @@ $(function () {
 
 const miss = {
     timeIndex: 0,
+    longTime: 0,
     /* 文字滚动特效 */
     data: {},
     init: () => {  /* 初始化 */
@@ -31,7 +32,7 @@ const miss = {
                 data.isHome ? $("#home").show() : $("#home").hide();
                 if (data.isTime && data.isTime !== miss.data.isTime) {
                     clearInterval(miss.timeIndex);
-                    miss.timeIndex = miss.timeEnd(data.longTime * 60);
+                    miss.timeIndex = miss.timeEnd(miss.longTime === 0 ? data.longTime * 60 : miss.longTime);
                     $("#time").show();
                 } else {
                     $("#time").hide();
@@ -54,6 +55,7 @@ const miss = {
             }
             $("#timeEnd").html(`直播结束：${hour < 9 ? `0${hour}` : hour}:${minute < 9 ? `0${minute}` : minute}:${second < 9 ? `0${second}` : second}`);
             longTime--;
+            miss.longTime = longTime;
         }, 1000);
     }
 }
