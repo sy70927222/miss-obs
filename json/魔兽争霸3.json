@@ -1,0 +1,18 @@
+{
+  "title": "游戏名称：神仙三国2",
+  "hiddenHead": true,
+  "gifts": [{
+    "img": "./stats/images/gift/fans.png",
+    "description": "X1&nbsp;上车一局(限首送)"
+  }, {
+    "img": "./stats/images/gift/bottle.png",
+    "description": "X1&nbsp;上车一局"
+  }, {
+    "img": "./stats/images/gift/book.png",
+    "description": "X1&nbsp;直到下播"
+  }],
+  "isTime": true,
+  "longTime": 360,
+  "timeIndex": 0,
+  "isHome": true
+}
