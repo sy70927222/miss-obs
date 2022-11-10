@@ -14,6 +14,7 @@ const miss = {
     },
     initData: () => {
         $.getJSON("https://sy70927222.github.io/miss-obs/json/data.json", (data)=>{
+            debugger;
             if (data !== miss.data) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
