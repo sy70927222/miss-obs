@@ -6,32 +6,36 @@ const miss = {
     /* 文字滚动特效 */
     data: {},
     init: () => {  /* 初始化 */
+        miss.initData();
         setInterval(() => {
-            $.getJson("./json/data.json", (data)=>{
-                if (data !== miss.data) {
-                    if (data.title) {
-                        $("#title").show().html(`<h1>${data.title}</h1>`);
-                    }
-                    //礼物面板
-                    $("nav").html("");
-                    if (data.gifts) {
-                        for (let gift of data.gifts) {
-                            $("#nav").append(`<li class="layui-nav-item"><a href="#">
-							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
-                        }
-                    }
-                    if (data.isHome) {
-                        $("#home").show();
-                    }
-                    if (data.isTime && data.isTime !== miss.data.isTime) {
-                        clearInterval(miss.data.timeIndex);
-                        $("#time").show();
-                        data.timeIndex = miss.timeEnd(data.longTime * 60);
-                    }
-                    miss.data = data;
-                }
-            });
+            miss.initData();
         }, 30 * 1000)
+    },
+    initData: () => {
+        $.getJSON("./json/data.json", (data)=>{
+            if (data !== miss.data) {
+                if (data.title) {
+                    $("#title").show().html(`<h1>${data.title}</h1>`);
+                }
+                //礼物面板
+                $("nav").html("");
+                if (data.gifts) {
+                    for (let gift of data.gifts) {
+                        $("#nav").append(`<li class="layui-nav-item"><a href="#">
+							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
+                    }
+                }
+                if (data.isHome) {
+                    $("#home").show();
+                }
+                if (data.isTime && data.isTime !== miss.data.isTime) {
+                    clearInterval(miss.data.timeIndex);
+                    $("#time").show();
+                    data.timeIndex = miss.timeEnd(data.longTime * 60);
+                }
+                miss.data = data;
+            }
+        });
     },
     timeEnd: (longTime) => {	/* 倒计时方法 */
         return setInterval(() => {
