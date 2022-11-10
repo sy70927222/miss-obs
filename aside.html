@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<title>虎牙 | smile丶孤城</title>
+		<meta name="author" content="Smith°">
+		<meta name="description" content="虎牙-smile丶孤城">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta property="og:title" content="虎牙 | smile丶孤城">
+		<meta property="og:site_name" content="虎牙 | smile丶孤城">
+		<meta property="og:image" content="">
+
+		<!--    style   -->
+		<link rel="stylesheet" href="https://sy70927222.github.io/syfight/layui/css/layui.css" media="screen"
+			  type="text/css">
+		<link rel="stylesheet" href="https://sy70927222.github.io/syfight/css/style.css">
+		<link rel="stylesheet" href="./css/miss.css" media="screen" type="text/css">
+	</head>
+	<body>
+		<!-- 顶部文字荧幕 -->
+		<div id="title" style="display: none" class="miss">
+		</div>
+		<aside id="sidebar" class="site-tree font">
+			<div id="gift" class="miss">
+				<div id="head">
+					<div class="layui-inline" style="display: block">
+						<img width="70" height="70"
+							 src="https://huyaimg.msstatic.com/avatar/1040/e3/0dfc85d55e4f08478060832b6b9ed2_180_135.jpg"
+							 class="layui-circle">
+					</div>
+					<h1>smile丶孤城</h1>
+					<h4 style="margin: 30px 0 0 20px;">
+						<li>欢迎来到直播间</li>
+					</h4>
+					<!--<h4 style="margin: -5px 0 0 58px;"><li >蓦然回首</li></h4>-->
+					<h4 style="margin: 20px 0 20px 80px;">
+						<li>点点关注不迷路</li>
+					</h4>
+				</div>
+				<ul id="nav" class="layui-nav layui-nav-tree layui-bg-cyan layui-inline" lay-filter="demo">
+				</ul>
+			</div>
+			<div id="home" style="display: none" class="miss">
+				<h1>房间密码：0729</h1>
+			</div>
+			<div id="time" style="display: none" class="miss">
+				<h1 id="timeEnd"></h1>
+			</div>
+		</aside>
+	</body>
+
+	<script src="https://sy70927222.github.io/syfight/js/jquery.js"></script>
+	<script>
+        $(function () {
+            miss.init();
+        });
+        const miss = {
+            /* 文字滚动特效 */
+            data: {
+            },
+            init: () => {  /* 初始化 */
+                let data = {
+                    title: "游戏名称：艾尔登法环",
+                    hiddenHead: true, 	//是否隐藏头
+                    gifts: [{
+                        img: `https://huyaimg.msstatic.com/cdnimage/actprop/20571_1_0_prop_streamer_resource_1645068821.png`,
+                        description: "X1&nbsp;上车一局(限首送)"
+                    }, {
+                        img: `./stats/images/gift/bottle.png`,
+                        description: "X1&nbsp;上车一局"
+                    }, {
+                        img: `./stats/images/gift/book.png`,
+                        description: "X1&nbsp;直到下播"
+                    }],
+                    isTime: true,		//是否显示倒计时
+                    longTime: 6 * 3600,	//倒计时时长
+                    timeIndex: 0,		//倒计时定时器编号
+                    isHome: true		//是否显示房间密码
+				};
+                if (data !== miss.data) {
+                    if (data.title) {
+                        $("#title").show().html(`<h1>${data.title}</h1>`);
+                    }
+                    //礼物面板
+                    $("nav").html("");
+                    if(data.gifts){
+                        for (let gift of data.gifts) {
+                            $("#nav").append(`<li class="layui-nav-item"><a href="#">
+							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
+                        }
+					}
+                    if (data.isHome) {
+                        $("#home").show();
+                    }
+                    if (data.isTime && data.isTime !== miss.data.isTime) {
+                        clearInterval(miss.data.timeIndex);
+                        $("#time").show();
+                        data.timeIndex = miss.timeEnd(data.longTime);
+                    }
+                    miss.data = data;
+                }
+            },
+            timeEnd: (longTime) => {	/* 倒计时方法 */
+                return setInterval(function () {
+                    let day = 0,
+                        hour = 0,
+                        minute = 0,
+                        second = 0;//时间默认值
+                    if (longTime > 0) {
+                        day = Math.floor(longTime / (60 * 60 * 24));
+                        hour = Math.floor(longTime / (60 * 60)) - (day * 24);
+                        minute = Math.floor(longTime / 60) - (day * 24 * 60) - (hour * 60);
+                        second = Math.floor(longTime) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+                    }
+                    $("#timeEnd").html(`直播结束：${hour < 9 ? `0${hour}` : hour}:${minute < 9 ? `0${minute}` : minute}:${second < 9 ? `0${second}` : second}`);
+                    longTime--;
+                }, 1000);
+            }
+        }
+	</script>
+</html>
