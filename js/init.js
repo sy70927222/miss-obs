@@ -11,7 +11,7 @@ const miss = {
         miss.initData();
         setInterval(() => {
             miss.initData();
-        }, 30 * 1000)
+        }, 2 * 60 * 1000)
     },
     initData: () => {
         $.getJSON("./json/data.json", data => {
@@ -21,7 +21,6 @@ const miss = {
                 }
                 //礼物面板
                 $("#nav").html("");
-                debugger;
                 if (data.gifts.length > 0) {
                     for (let gift of data.gifts) {
                         $("#nav").append(`<li class="layui-nav-item"><a href="#">
