@@ -21,6 +21,7 @@ const miss = {
                 }
                 //礼物面板
                 $("#nav").html("");
+                debugger;
                 if (data.gifts.length > 0) {
                     for (let gift of data.gifts) {
                         $("#nav").append(`<li class="layui-nav-item"><a href="#">
