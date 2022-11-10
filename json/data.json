@@ -11,8 +11,8 @@
     "img": "./stats/images/gift/book.png",
     "description": "X1&nbsp;直到下播"
   }],
-  "isTime": false,
+  "isTime": true,
   "longTime": 360,
   "timeIndex": 0,
-  "isHome": false
+  "isHome": true
 }
