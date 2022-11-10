@@ -13,9 +13,9 @@ const miss = {
         }, 30 * 1000)
     },
     initData: () => {
-        $.getJSON("./json/data.json", (data)=>{
+        $.getJSON("./json/data.json", data => {
             debugger;
-            if (data !== miss.data) {
+            if (JSON.stringify(data) !== JSON.stringify(miss.data)) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
                 }
@@ -28,13 +28,13 @@ const miss = {
                     }
                 }
 
-                data.isHome ? $("#home").show() : $("#home").hidden();
+                data.isHome ? $("#home").show() : $("#home").hide();
                 if (data.isTime && data.isTime !== miss.data.isTime) {
                     clearInterval(miss.timeIndex);
                     miss.timeIndex = miss.timeEnd(data.longTime * 60);
                     $("#time").show();
-                } else{
-                    $("#time").hidden();
+                } else {
+                    $("#time").hide();
                 }
                 miss.data = data;
             }
