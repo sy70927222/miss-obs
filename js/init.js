@@ -13,7 +13,7 @@ const miss = {
         }, 30 * 1000)
     },
     initData: () => {
-        $.getJSON("https://sy70927222.github.io/miss-obs/json/data.json", (data)=>{
+        $.getJSON("./json/data.json", (data)=>{
             debugger;
             if (data !== miss.data) {
                 if (data.title) {
@@ -27,13 +27,14 @@ const miss = {
 							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
                     }
                 }
-                if (data.isHome) {
-                    $("#home").show();
-                }
+
+                data.isHome ? $("#home").show() : $("#home").hidden();
                 if (data.isTime && data.isTime !== miss.data.isTime) {
                     clearInterval(miss.timeIndex);
-                    $("#time").show();
                     miss.timeIndex = miss.timeEnd(data.longTime * 60);
+                    $("#time").show();
+                } else{
+                    $("#time").hidden();
                 }
                 miss.data = data;
             }
