@@ -18,8 +18,8 @@ const miss = {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
                 }
                 //礼物面板
-                $("nav").html("");
                 if (data.gifts) {
+                    $("#nav").html("");
                     for (let gift of data.gifts) {
                         $("#nav").append(`<li class="layui-nav-item"><a href="#">
 							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
