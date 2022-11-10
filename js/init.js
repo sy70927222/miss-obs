@@ -15,7 +15,6 @@ const miss = {
     },
     initData: () => {
         $.getJSON("./json/data.json", data => {
-            debugger;
             if (JSON.stringify(data) !== JSON.stringify(miss.data)) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
