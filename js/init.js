@@ -4,7 +4,7 @@ $(function () {
 
 const miss = {
     timeIndex: 0,
-    longTime: 0,
+    longTime: 6 * 60 * 60,
     /* 文字滚动特效 */
     data: {},
     init: () => {  /* 初始化 */
@@ -30,13 +30,8 @@ const miss = {
                 }
 
                 data.isHome ? $("#home").show() : $("#home").hide();
-                if (data.isTime && data.isTime !== miss.data.isTime) {
-                    clearInterval(miss.timeIndex);
-                    miss.timeIndex = miss.timeEnd(miss.longTime === 0 ? data.longTime * 60 : miss.longTime);
-                    $("#time").show();
-                } else {
-                    $("#time").hide();
-                }
+                clearInterval(miss.timeIndex);
+                miss.timeIndex = miss.timeEnd(miss.longTime + (data.longTime * 60 * 60));
                 miss.data = data;
             }
         });
