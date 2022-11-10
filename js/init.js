@@ -13,6 +13,7 @@ const miss = {
     },
     initData: () => {
         $.getJSON("./json/data.json", (data)=>{
+            debugger;
             if (data !== miss.data) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
