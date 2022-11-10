@@ -31,7 +31,7 @@ const miss = {
 
                 data.isHome ? $("#home").show() : $("#home").hide();
                 clearInterval(miss.timeIndex);
-                miss.timeIndex = miss.timeEnd(miss.longTime + (data.longTime * 60 * 60));
+                miss.timeIndex = miss.timeEnd(miss.longTime + (data.longTime * 60));
                 miss.data = data;
             }
         });
