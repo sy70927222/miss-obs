@@ -33,7 +33,7 @@ const miss = {
                 if (data.isTime && data.isTime !== miss.data.isTime) {
                     clearInterval(miss.timeIndex);
                     $("#time").show();
-                    data.timeIndex = miss.timeEnd(data.longTime * 60);
+                    miss.timeIndex = miss.timeEnd(data.longTime * 60);
                 }
                 miss.data = data;
             }
