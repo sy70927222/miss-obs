@@ -3,6 +3,7 @@ $(function () {
 });
 
 const miss = {
+    timeIndex: 0,
     /* 文字滚动特效 */
     data: {},
     init: () => {  /* 初始化 */
@@ -13,7 +14,6 @@ const miss = {
     },
     initData: () => {
         $.getJSON("https://sy70927222.github.io/miss-obs/json/data.json", (data)=>{
-            debugger;
             if (data !== miss.data) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
@@ -30,7 +30,7 @@ const miss = {
                     $("#home").show();
                 }
                 if (data.isTime && data.isTime !== miss.data.isTime) {
-                    clearInterval(miss.data.timeIndex);
+                    clearInterval(miss.timeIndex);
                     $("#time").show();
                     data.timeIndex = miss.timeEnd(data.longTime * 60);
                 }
