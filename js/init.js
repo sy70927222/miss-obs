@@ -12,7 +12,7 @@ const miss = {
         }, 30 * 1000)
     },
     initData: () => {
-        $.getJSON("./json/data.json", (data)=>{
+        $.getJSON("https://sy70927222.github.io/miss-obs/json/data.json", (data)=>{
             debugger;
             if (data !== miss.data) {
                 if (data.title) {
