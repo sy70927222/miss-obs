@@ -1,9 +1,7 @@
 {
   "title": "游戏名称：艾尔登法环",
-  "hiddenHead": true,
   "gifts": [{}],
   "isTime": true,
   "longTime": 360,
-  "timeIndex": 0,
-  "isHome": true
+  "isHome": false
 }
