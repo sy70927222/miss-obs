@@ -1,7 +1,23 @@
 {
-  "title": "游戏名称：艾尔登法环",
-  "gifts": [],
+  "title": "游戏名称：神仙三国2",
+  "gifts": [{
+    "img": "./stats/images/gift/fans.png",
+    "description": "X1&nbsp;上车一局(限首送)"
+  }, {
+    "img": "./stats/images/gift/bottle.png",
+    "description": "X1&nbsp;上车一局"
+  }, {
+    "img": "./stats/images/gift/book.png",
+    "description": "X1&nbsp;直到下播"
+  }],
+  "socials": [{
+    "img": "./stats/images/social/wechat.png",
+    "description": "sy70927222"
+  },{
+    "img": "./stats/images/social/qq.png",
+    "description": "381397514"
+  }],
   "isTime": true,
   "longTime": 0,
-  "isHome": false
+  "isHome": true
 }

@@ -111,6 +111,9 @@
     width: 20px;
     margin-right: 10px;
     background-size: auto 40px !important;
+}
+
+.fans{
     animation: fans 1000ms steps(10) infinite;
 }
 

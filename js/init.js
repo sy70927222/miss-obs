@@ -24,7 +24,14 @@ const miss = {
                 if (data.gifts.length > 0) {
                     for (let gift of data.gifts) {
                         $("#nav").append(`<li class="layui-nav-item"><a href="#">
-							<i class="layui-icon" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
+							<i class="layui-icon fans" style="background: url(${gift.img}) no-repeat;"></i>${gift.description}</a></li>`);
+                    }
+                }
+
+                if (data.socials.length > 0) {
+                    for (let social of data.socials) {
+                        $("#nav").append(`<li class="layui-nav-item"><a href="#">
+							<i class="layui-icon" style="background: url(${social.img}) no-repeat;"></i>${social.description}</a></li>`);
                     }
                 }
 
