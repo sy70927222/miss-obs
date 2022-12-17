@@ -61,6 +61,8 @@ const miss = {
                         clearInterval(miss.rollIndex);
                         miss.rollIndex = miss.rollY("guest");
                     }
+                } else{
+                    $("#guests").hide();
                 }
             }
         });
