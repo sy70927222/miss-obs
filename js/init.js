@@ -21,7 +21,6 @@ const miss = {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);
                 }
-                debugger;
                 //礼物面板
                 $("#nav").html("");
                 if (data.gifts.length > 0) {
@@ -59,9 +58,6 @@ const miss = {
                             $("#guest").append(`<li>${index}。${guest}</li>`);
                             index++;
                         }
-                    }
-
-                    if (data.guests.length > 8) {
                         clearInterval(miss.rollIndex);
                         miss.rollIndex = miss.rollY("guest");
                     }
@@ -90,7 +86,7 @@ const miss = {
         let element = document.getElementById(id);
         let rollType = true;
         return setInterval(() => {
-            if (element.scrollTop >= element.scrollHeight/2) {
+            if (element.clientHeight + element.scrollTop >= element.scrollHeight) {
                 rollType = false;
             }
             if (element.scrollTop <= 0) {
