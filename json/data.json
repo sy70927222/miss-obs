@@ -1,5 +1,5 @@
 {
-  "title": "游戏名称：神仙三国2(预定五折卷)",
+  "title": "游戏名称：神仙三国2",
   "gifts": [{
     "img": "./stats/images/gift/fans.png",
     "description": "X1&nbsp;上车一局(限首送)"
@@ -11,13 +11,21 @@
     "description": "X1&nbsp;直到下播"
   }],
   "socials": [{
+    "style": "padding-left:0px;margin-right: 0px;width:0px;",
+    "img": "",
+    "description": "需要五折卷&nbsp;&nbsp;联系主播"
+    },{
+    "style": "",
     "img": "./stats/images/social/wechat.png",
     "description": "sy70927222"
   },{
+    "style": "",
     "img": "./stats/images/social/qq.png",
     "description": "381397514"
   }],
   "isTime": true,
   "longTime": 0,
-  "isHome": true
+  "isHome": true,
+  "isGuests": true,
+  "guests": ["miss","miss"]
 }
