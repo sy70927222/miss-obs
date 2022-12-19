@@ -26,6 +26,6 @@
   "isTime": true,
   "longTime": 0,
   "isHome": true,
-  "isGuests": true,
+  "isGuests": false,
   "guests": ["原来是小鳖三喔"]
 }
