@@ -1,5 +1,5 @@
 {
-  "title": " 游戏名称：催眠小日常",
+  "title": "",
   "gifts": [{
     "img": "./stats/images/gift/bottle.png",
     "description": "X1&nbsp;上车一局"
@@ -22,7 +22,7 @@
   }],
   "isTime": true,
   "longTime": 0,
-  "isHome": true,
+  "isHome": false,
   "isGuests": false,
   "guests": ["原来是小鳖三喔"]
 }
