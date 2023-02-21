@@ -1,0 +1,28 @@
+{
+  "title": "",
+  "gifts": [{
+    "img": "./stats/images/gift/bottle.png",
+    "description": "X1&nbsp;上车一局"
+  }, {
+    "img": "./stats/images/gift/book.png",
+    "description": "X1&nbsp;直到下播"
+  }],
+  "socials": [{
+    "style": "padding-left:0px;margin-right: 0px;width:0px;",
+    "img": "",
+    "description": "需要五折卷&nbsp;&nbsp;联系主播"
+  },{
+    "style": "",
+    "img": "./stats/images/social/wechat.png",
+    "description": "sy70927222"
+  },{
+    "style": "",
+    "img": "./stats/images/social/qq.png",
+    "description": "381397514"
+  }],
+  "isTime": true,
+  "longTime": 0,
+  "isHome": false,
+  "isGuests": false,
+  "guests": ["原来是小鳖三喔"]
+}
