@@ -1,6 +1,12 @@
 {
-  "title": "",
-  "gifts": [],
+  "title": "魔法书点任意非氪金地图",
+  "gifts": [{
+    "img": "./stats/images/gift/bottle.png",
+    "description": "X1&nbsp;上车一局"
+  }, {
+    "img": "./stats/images/gift/book.png",
+    "description": "X1&nbsp;直到下播"
+  }],
   "socials": [{
     "style": "",
     "img": "./stats/images/social/wechat.png",
@@ -10,7 +16,7 @@
     "img": "./stats/images/social/qq.png",
     "description": "381397514"
   }],
-  "isTime": false,
+  "isTime": true,
   "longTime": 0,
   "isHome": false,
   "isGuests": false,
