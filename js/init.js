@@ -16,7 +16,7 @@ const miss = {
         }, 2 * 60 * 1000)
     },
     initData: () => {
-        $.getJSON("./json/燕云十六声.json", data => {
+        $.getJSON("./json/data.json", data => {
             if (JSON.stringify(data) !== JSON.stringify(miss.data)) {
                 if (data.title) {
                     $("#title").show().html(`<h1>${data.title}</h1>`);

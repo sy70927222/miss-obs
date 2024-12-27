@@ -1,24 +1,10 @@
 {
-  "title": "魔法书点任意非氪金地图",
-  "gifts": [{
-    "img": "./stats/images/gift/bottle.png",
-    "description": "X1&nbsp;上车一局"
-  }, {
-    "img": "./stats/images/gift/book.png",
-    "description": "X1&nbsp;直到下播"
-  }],
-  "socials": [{
-    "style": "",
-    "img": "./stats/images/social/wechat.png",
-    "description": "sy70927222"
-  },{
-    "style": "",
-    "img": "./stats/images/social/qq.png",
-    "description": "381397514"
-  }],
-  "isTime": true,
+  "title": "燕云十六声",
+  "gifts": [],
+  "socials": [],
+  "isTime": false,
   "longTime": 0,
   "isHome": false,
   "isGuests": false,
-  "guests": ["原来是小鳖三喔"]
+  "guests": []
 }
