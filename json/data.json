@@ -1,7 +1,21 @@
 {
-  "title": "空闲时间多新手纯绿菜鸟主播",
+  "title": "纯绿接单唐人急速跑刀、3*3",
   "gifts": [],
-  "socials": [],
+  "socials": [{
+    "style": "",
+    "img": "./stats/images/social/wechat.png",
+    "description": "sy70927222"
+  },
+  {
+    "style": "",
+    "img": "",
+    "description": "6格 8=100万"
+  },
+  {
+    "style": "",
+    "img": "",
+    "description": "9格 7=100万"
+  }],
   "isTime": false,
   "longTime": 0,
   "isHome": false,
